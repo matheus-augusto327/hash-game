@@ -12,7 +12,14 @@ function handleClick(event) {
     let square = event.target
     let position = square.id
 
-    handleMove(position)
+    if(handleMove(position)) {
+
+        setTimeout(() => {
+            alert("O Jogo Acabou - O Vencedor foi " + (playerTime + 1))
+        }, 10)
+
+    }
+
     updateSquares()
 
 }
