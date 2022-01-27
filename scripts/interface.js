@@ -24,6 +24,14 @@ function handleClick(event) {
 
 }
 
+function updateSquare(position) {
+
+    let square = document.getElementById(position.toString())
+    let symbol = board[position]
+    square.innerHTML = `<div class="${symbol}"></div>`
+
+}
+
 function updateSquares() {
 
     let squares = document.querySelectorAll(".square")
